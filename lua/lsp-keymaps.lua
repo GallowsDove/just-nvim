@@ -26,8 +26,8 @@ function on_attach(client, bufnr)
 
   -- LSPSaga keymaps
   map(bufnr, "n", "gr", "<cmd>Lspsaga rename<cr>", opts)
-  map(bufnr, "n", "gx", "<cmd>Lspsaga code_action<cr>", opts)
-  map(bufnr, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", opts)
+  map(bufnr, "n", "ca", "<cmd>Lspsaga code_action<cr>", opts)
+  map(bufnr, "x", "ca", ":<c-u>Lspsaga range_code_action<cr>", opts)
   map(bufnr, "n", "K",  "<cmd>Lspsaga hover_doc<cr>", opts)
   map(bufnr, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
   map(bufnr, "n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)

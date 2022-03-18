@@ -37,9 +37,9 @@ map('t', '<A-i>', '<C-\\><C-n><Cmd>lua require("FTerm").toggle()<CR>', opts)
 map('n', '<leader>xx', '<Cmd>TroubleToggle<CR>', opts)
 map('n', '<leader>xw', '<Cmd>TroubleToggle workspace_diagnostics<CR>', opts)
 map('n', '<leader>xd', '<Cmd>TroubleToggle document_diagnostics<CR>', opts)
+map('n', 'gR', '<Cmd>TroubleToggle lsp_references<CR>', opts)
 -- nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 -- nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
-map('n', 'gR', '<Cmd>TroubleToggle lsp_references<CR>', opts)
 
 
 -- BufferLine Keymaps
@@ -55,9 +55,8 @@ map('n', '<mymap>' , '<Cmd>BufferLineMovePrev<CR>', opts)
 
 -- Nvim Tree Keymaps
 map('n', '<C-t>', '<Cmd>NvimTreeToggle<CR>', opts)
--- map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>', opts)
 
 
 -- Others
 map('n', '<A-q>', '<Cmd>bd<CR>', opts)
-map('n', '<A-Q>', '<Cmd>bd!<CR>', opts)
+map('n', '!<A-q>', '<Cmd>bd!<CR>', opts)

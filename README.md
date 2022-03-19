@@ -1,5 +1,5 @@
 # Just Nvim
-Just nvim is just a personal nvim configuaration. It's not meant to be portable, or to appeal to anyone at all. Tested on Kali linux.
+Just Nvim is just a personal nvim configuaration. It's not meant to be portable, or to appeal to anyone at all. Tested on Kali linux.
 
 ### Instalation
 First, you need to install [vim-plug](https://github.com/junegunn/vim-plug).
@@ -11,7 +11,7 @@ You can check dependencies using :checkhealth
 
 - Language servers of choice. (Have to be added to lua/plugins/lspconfig.lua)
 - TreeSitter grammars can pe installed via :TSInstall
-- Git - for git stuff
+- Git - For git stuff
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) - For extended telescope functions
 - [Fd](https://github.com/sharkdp/fd) - For better file browsing, and for searching repositories
 - [Glow](https://github.com/charmbracelet/glow) - For markdown preview
@@ -21,7 +21,7 @@ You can check dependencies using :checkhealth
 ### Custom Keybindings
 
 Keybindings can be added to keymaps.lua.
-Keypas specific to LSP should be added to lsp-keymaps.lua.
+Keybindings specific to LSP should be added to lsp-keymaps.lua.
 
 | Keybind         | Action                                 |
 |:---------------:|:--------------------------------------:|

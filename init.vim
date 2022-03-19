@@ -19,7 +19,7 @@ lua << EOF
   require'plugins.treesitter'
 
   -- Lualine
-  require'evilline'
+  require'line'
 
   -- Alpha
   require'startscreen'

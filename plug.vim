@@ -35,6 +35,7 @@ Plug 'numToStr/FTerm.nvim'
 Plug 'Mofiqul/dracula.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'ellisonleao/glow.nvim'
 
 call plug#end()
 

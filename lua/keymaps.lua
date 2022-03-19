@@ -2,10 +2,10 @@
 local opts = { noremap=true, silent=true }
 local map = vim.api.nvim_set_keymap
 
-map('n', '<space>e', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
-map('n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-map('n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-map('n', '<space>q', '<Cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+-- map('n', '<space>e', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+-- map('n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+-- map('n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+-- map('n', '<space>q', '<Cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 
 -- HSLLens Keymaps
@@ -37,7 +37,7 @@ map('t', '<A-i>', '<C-\\><C-n><Cmd>lua require("FTerm").toggle()<CR>', opts)
 map('n', '<leader>xx', '<Cmd>TroubleToggle<CR>', opts)
 map('n', '<leader>xw', '<Cmd>TroubleToggle workspace_diagnostics<CR>', opts)
 map('n', '<leader>xd', '<Cmd>TroubleToggle document_diagnostics<CR>', opts)
-map('n', 'gR', '<Cmd>TroubleToggle lsp_references<CR>', opts)
+-- map('n', 'gR', '<Cmd>TroubleToggle lsp_references<CR>', opts)
 -- nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 -- nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
 
@@ -55,6 +55,10 @@ map('n', '<mymap>' , '<Cmd>BufferLineMovePrev<CR>', opts)
 
 -- Nvim Tree Keymaps
 map('n', '<C-t>', '<Cmd>NvimTreeToggle<CR>', opts)
+
+
+-- Glow
+map('n', '<A-p>', '<Cmd>Glow<CR>', opts)
 
 
 -- Others

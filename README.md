@@ -1,8 +1,10 @@
 # Just Nvim
-Just nvim is just a personal nvim configuaration. It's not meant to be portable, or to appeal to anyone at all.
+Just nvim is just a personal nvim configuaration. It's not meant to be portable, or to appeal to anyone at all. Tested on Kali linux.
 
 ### Instalation
-Simply clone this repository and move all files to your nvim config folder (e.g. ~/.config/nvim/)
+First, you need to install [vim-plug](https://github.com/junegunn/vim-plug).
+Then **just** simply clone this repository and move all files to your nvim config folder (e.g. ~/.config/nvim/).
+There should be an error message on your first launch. Simply run `:PlugInstall`, which should install all required plugins.
 
 ### Optional dependencies
 You can check dependencies using :checkhealth
@@ -17,6 +19,9 @@ You can check dependencies using :checkhealth
 
 
 ### Custom Keybindings
+
+Keybindings can be added to keymaps.lua.
+Keypas specific to LSP should be added to lsp-keymaps.lua.
 
 | Keybind         | Action                                 |
 |:---------------:|:--------------------------------------:|

@@ -7,16 +7,17 @@ Then **just** clone this repository and move all files to your nvim config folde
 There should be an error message on your first launch. Simply run `:PlugInstall`, which should install all required plugins.  
   
 A possible command for this would be:  
-`cp -r ~/.config/nvim ~/.config/.nvim && rm -rf ~/.config/nvim && git clone https://github.com/GallowsDove/just-nvim ~/.config/nvim`
-
+```shell
+cp -r ~/.config/nvim ~/.config/.nvim && rm -rf ~/.config/nvim && git clone https://github.com/GallowsDove/just-nvim ~/.config/nvim
+```
 ### Optional dependencies
 You can check dependencies using :checkhealth
 
 - Language servers of choice. (Have to be added to lua/plugins/lspconfig.lua)
 - TreeSitter grammars can pe installed via :TSInstall
 - Git - For git stuff
+- [**Fd**](https://github.com/sharkdp/fd) - For better file browsing, and for searching repositories. Also for default wilder config.
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) - For extended telescope functions
-- [Fd](https://github.com/sharkdp/fd) - For better file browsing, and for searching repositories
 - [Glow](https://github.com/charmbracelet/glow) - For markdown preview
 - [Bat](https://github.com/sharkdp/bat) - For better file previews
 

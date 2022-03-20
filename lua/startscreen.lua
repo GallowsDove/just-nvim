@@ -14,10 +14,10 @@ function M.get_dashboard()
 	local function footer()
 		local v = vim.version()
 		local datetime = os.date " %d-%m-%Y   %H:%M:%S"
-		return string.format("  v%s.%s.%s  %s", v.major, v.minor, v.patch, datetime)
+		return { string.format("  v%s.%s.%s  %s", v.major, v.minor, v.patch, datetime) }
 	end
 
-	dashboard.section.header.val = { " ",
+	dashboard.section.header.val = {
 	"  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠛⢦⡀⠀             ", 
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠱⡀⠀⠀            ",
 	"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠒⠉⠉⠉⠉⠑⠒⠲⠤⢄⣀⡏⠉⠁⠒⠢⢷⠀⠀            ",
@@ -58,7 +58,22 @@ function M.get_dashboard()
 	dashboard.section.footer.val = footer()
 	--dashboard.section.footer.opts.hl = dashboard.section.header.opts.hl
 
-	dashboard.config.layout[1].val = 1
+	local head_butt_padding = 3
+	local occu_height = #dashboard.section.header.val + 2 * #dashboard.section.buttons.val + head_butt_padding
+	local header_padding = math.max(0, math.ceil((vim.fn.winheight('$') - occu_height) * 0.25 ) + 1)
+	local foot_butt_padding_ub = vim.o.lines - header_padding - occu_height - #dashboard.section.footer.val - 3
+	local foot_butt_padding = math.floor((vim.fn.winheight('$') - 2 * header_padding - occu_height))
+	foot_butt_padding = math.max(0, math.max(math.min(0, foot_butt_padding), math.min(math.max(0, foot_butt_padding), foot_butt_padding_ub)))
+	head_butt_padding = math.min(math.max(head_butt_padding - 2, header_padding), header_padding)
+
+	dashboard.config.layout = {
+  		{ type = 'padding', val = header_padding },
+  		dashboard.section.header,
+  		{ type = 'padding', val = head_butt_padding },
+  		dashboard.section.buttons,
+  		{ type = 'padding', val = foot_butt_padding },
+  		dashboard.section.footer,
+	}
 
   return dashboard
 end

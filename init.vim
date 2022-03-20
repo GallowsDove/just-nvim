@@ -4,7 +4,7 @@ runtime options.vim
 lua << EOF
   require'impatient'
 
-	require'plugins.bufferline'
+  require'plugins.bufferline'
 
   -- Nvim Tree
   require'nvim-tree'.setup{ view = { width = 40, }, }

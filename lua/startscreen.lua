@@ -15,7 +15,7 @@ function M.get_dashboard()
 		local plugins = vim.tbl_count(vim.g.plugs)
 		local v = vim.version()
 		local datetime = os.date " %d-%m-%Y   %H:%M:%S"
-		return { string.format(" %s plugins  v%s.%s.%s  %s", plugins, v.major, v.minor, v.patch, datetime) }
+		return { string.format(" %s plugins   v%s.%s.%s  %s", plugins, v.major, v.minor, v.patch, datetime) }
 	end
 
 	dashboard.section.header.val = {

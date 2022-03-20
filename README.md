@@ -6,10 +6,22 @@ First, you need to install [vim-plug](https://github.com/junegunn/vim-plug).
 Then **just** clone this repository and move all files to your nvim config folder (e.g. ~/.config/nvim/).
 There should be an error message on your first launch. Simply run `:PlugInstall`, which should install all required plugins.  
   
-A possible command for this would be:  
+A possible way to achieve that would be:  
+- Create backup
 ```shell
-cp -r ~/.config/nvim ~/.config/.nvim && rm -rf ~/.config/nvim && git clone https://github.com/GallowsDove/just-nvim ~/.config/nvim
+cp -r ~/.config/nvim ~/.config/.nvim 
 ```
+
+- Remove current config
+```shell
+rm -rf ~/.config/nvim 
+```
+
+- Clone this repository
+```shell
+git clone https://github.com/GallowsDove/just-nvim ~/.config/nvim
+```
+
 ### Optional dependencies
 You can check dependencies using :checkhealth
 

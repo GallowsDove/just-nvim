@@ -8,7 +8,7 @@ endfunction
 
 Plug 'lewis6991/impatient.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+Plug 'gelguy/wilder.nvim', { 'on': 'CmdlineEnter', 'do': function('UpdateRemotePlugins') }
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -29,6 +29,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'cljoly/telescope-repo.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'romgrk/fzy-lua-native', { 'do': 'make' }
 Plug 'weilbith/nvim-code-action-menu'
 Plug 'tami5/lspsaga.nvim'
 Plug 'numToStr/FTerm.nvim'

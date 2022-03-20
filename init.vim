@@ -33,9 +33,6 @@ lua << EOF
   -- LSPSaga
   require'plugins.lspsaga'
 
-  -- BufferLine
-  require'plugins.bufferline'
-
   -- Trouble
   require'trouble'.setup()
 
@@ -49,10 +46,8 @@ lua << EOF
   require'keymaps'
 EOF
 
-call wilder#set_option('renderer', wilder#popupmenu_renderer({
-      \ 'highlighter': wilder#basic_highlighter(),
-      \ }))
+autocmd BufAdd,BufReadPre * ++once lua require'plugins.bufferline'
 
-call wilder#setup({'modes': [':', '/', '?']})
+autocmd CmdlineEnter * ++once runtime wilder.vim | call wilder#main#start()
 
 colorscheme dracula

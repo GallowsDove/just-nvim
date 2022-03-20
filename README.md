@@ -3,8 +3,11 @@ Just Nvim is just a personal nvim configuaration. It's not meant to be portable,
 
 ### Instalation
 First, you need to install [vim-plug](https://github.com/junegunn/vim-plug).
-Then **just** simply clone this repository and move all files to your nvim config folder (e.g. ~/.config/nvim/).
-There should be an error message on your first launch. Simply run `:PlugInstall`, which should install all required plugins.
+Then **just** clone this repository and move all files to your nvim config folder (e.g. ~/.config/nvim/).
+There should be an error message on your first launch. Simply run `:PlugInstall`, which should install all required plugins.  
+  
+A possible command for this would be:  
+`cp -r ~/.config/nvim ~/.config/.nvim && rm -rf ~/.config/nvim && git clone https://github.com/GallowsDove/just-nvim ~/.config/nvim`
 
 ### Optional dependencies
 You can check dependencies using :checkhealth

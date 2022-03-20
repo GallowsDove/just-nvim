@@ -51,7 +51,7 @@ function M.get_dashboard()
 		button("f", "  Find file", "<Cmd>Telescope find_files<CR>"),
 		button("o", "  Recently opened files", "<Cmd>Telescope oldfiles<CR>"),
 		button("n", "  New file", "<Cmd>ene <BAR> startinsert<CR>"),
-		button("r", "  Find repository", "<Cmd>Telescope repo<CR>"),
+		button("r", "  Find repository", "<Cmd>Telescope repo list<CR>"),
 		button("u", "  Update plugins", "<Cmd>PlugUpdate<CR>"),
 		button("q", "  Quit", "<Cmd>qa<CR>"),
 	}

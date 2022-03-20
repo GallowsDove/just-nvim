@@ -29,7 +29,10 @@ lua << EOF
   -- LSPConfig
   require'plugins.lspconfig'
    
-  -- Cmp.
+  -- UltiSnips
+  require'plugins.ultisnips'
+
+  -- Cmp
   require'plugins.cmp' 
 
   -- LSPSaga

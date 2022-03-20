@@ -15,7 +15,4 @@ set tabstop=4
 
 autocmd FileType haskell setlocal shiftwidth=2 softtabstop=2 expandtab
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:indent_blankline_filetype_exclude=['lspinfo', 'checkhealth', 'help', 'alpha', '']

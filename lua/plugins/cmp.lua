@@ -1,25 +1,44 @@
+-- Setup nvim-cmp.
 local cmp = require'cmp'
 
 cmp.setup({
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-      vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      -- For `ultisnips` user.
+      vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
-  mapping = require'cmp-keymaps', 
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'ultisnips' },
-  }, {
-    { name = 'buffer' },
-  })
+  mapping = {
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
+    ['<Esc>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+  },
+  sources = {
+    { name = 'nvim_lsp' }, -- For nvim-lsp
+    { name = 'ultisnips' }, -- For ultisnips user.
+    { name = 'nvim_lua' }, -- for nvim lua function
+    { name = 'path' }, -- for path completion
+    { name = 'buffer', keyword_length = 4 }, -- for buffer word completion
+    { name = 'omni' },
+    { name = 'emoji', insert = true, } -- emoji completion
+  },
+  completion = {
+    keyword_length = 1,
+    completeopt = "menu,noselect"
+  },
 })
-
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-

@@ -37,6 +37,7 @@ Plug 'Mofiqul/dracula.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'ellisonleao/glow.nvim'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 

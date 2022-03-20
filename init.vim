@@ -4,6 +4,8 @@ runtime options.vim
 lua << EOF
   require'impatient'
 
+	require'plugins.bufferline'
+
   -- Nvim Tree
   require'nvim-tree'.setup{ view = { width = 40, }, }
 
@@ -22,7 +24,7 @@ lua << EOF
   require'line'
 
   -- Alpha
-  require'startscreen'
+  require'startscreen'.setup()
 
   -- LSPConfig
   require'plugins.lspconfig'
@@ -45,8 +47,6 @@ lua << EOF
   -- Set Keymaps
   require'keymaps'
 EOF
-
-autocmd BufAdd,BufReadPre * ++once lua require'plugins.bufferline'
 
 autocmd CmdlineEnter * ++once runtime wilder.vim | call wilder#main#start()
 

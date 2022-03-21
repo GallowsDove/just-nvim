@@ -41,4 +41,9 @@ cmp.setup({
     keyword_length = 1,
     completeopt = "menu,noselect"
   },
+  formatting = {
+	format = require'lspkind'.cmp_format{
+	  maxwidth = 50
+	}
+  }
 })

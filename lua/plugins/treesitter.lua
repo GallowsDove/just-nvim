@@ -13,4 +13,3 @@ parser_config.haskell = {
   }
 }
 
-

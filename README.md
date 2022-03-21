@@ -60,4 +60,7 @@ Keybindings specific to LSP should be added to lsp-keymaps.lua.
 | `gr`            | Rename                                 |
 | `K`             | Show hover doc                         |
 | `<space>d`      | Show line diagnostics                  |
-
+| `gc`            | Linewise comment                       |
+| `gb`            | Blockwise comment                      |
+| `\gd`           | Show deleted lines (git)               |
+| `\gD`           | Show git diff                          |

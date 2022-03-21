@@ -4,8 +4,9 @@ runtime options.vim
 lua << EOF
   require'impatient'
 
+  -- Bufferline
   require'plugins.bufferline'
-
+  
   -- Nvim Tree
   require'nvim-tree'.setup{ view = { width = 40, }, }
 
@@ -13,6 +14,9 @@ lua << EOF
   require'telescope'.setup()
   require'telescope'.load_extension'repo'
   require'telescope'.load_extension'fzf'
+
+  -- Gitsigns
+  require'gitsigns'.setup()
 
   -- nvim-web-devicons
   require'nvim-web-devicons'.setup()
@@ -46,6 +50,9 @@ lua << EOF
  
   -- Indent Blankline
   require'indent_blankline'.setup()
+
+  -- Comment
+  require'Comment'.setup()
 
   -- Set Keymaps
   require'keymaps'

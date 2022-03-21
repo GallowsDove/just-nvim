@@ -61,6 +61,11 @@ map('n', '<C-t>', '<Cmd>NvimTreeToggle<CR>', opts)
 map('n', '<A-p>', '<Cmd>Glow<CR>', opts)
 
 
+-- Gitsigns
+map('n', '<leader>td', '<Cmd>Gitsigns toggle_deleted<CR>', opts)
+map('n', '<leader>tD', '<Cmd>Gitsigns diffthis<CR>', opts)
+
+
 -- Others
 map('n', '<A-q>', '<Cmd>bd<CR>', opts)
 map('n', '!<A-q>', '<Cmd>bd!<CR>', opts)

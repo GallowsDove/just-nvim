@@ -38,6 +38,9 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'ellisonleao/glow.nvim'
 Plug 'honza/vim-snippets'
+Plug 'onsails/lspkind-nvim'
+Plug 'numToStr/Comment.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()
 

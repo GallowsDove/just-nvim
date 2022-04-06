@@ -41,6 +41,7 @@ Plug 'honza/vim-snippets'
 Plug 'onsails/lspkind-nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'xiyaowong/nvim-transparent'
 
 call plug#end()
 

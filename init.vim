@@ -3,7 +3,9 @@ runtime options.vim
 
 lua << EOF
   require'impatient'
-
+  
+  require'transparent'.setup({enable = true})
+	
   -- Bufferline
   require'plugins.bufferline'
   
@@ -13,7 +15,7 @@ lua << EOF
   -- Telescope
   require'telescope'.setup()
   require'telescope'.load_extension'repo'
-  require'telescope'.load_extension'fzf'
+  ---require'telescope'.load_extension'fzf'
 
   -- Gitsigns
   require'gitsigns'.setup()

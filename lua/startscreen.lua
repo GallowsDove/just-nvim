@@ -89,12 +89,13 @@ function M.setup()
 	vim.cmd [[
 		augroup alpha_tablineau
 		au!
-		au FileType alpha lua require'bufferline'.toggle_bufferline() 
-		au BufUnload <buffer> lua require'bufferline'.toggle_bufferline()
 		au FileType alpha set showtabline=0 laststatus=0 noruler | au BufUnload <buffer> set showtabline=2 ruler laststatus=2
 		augroup END
 	]]
 end
+
+--      au FileType alpha lua require'bufferline'.toggle_bufferline() 
+-- 		au BufUnload <buffer> lua require'bufferline'.toggle_bufferline()
 
 return M
 

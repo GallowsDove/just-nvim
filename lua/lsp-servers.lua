@@ -5,6 +5,7 @@ function M.get()
 		"pyright",
 		"hls",
 		"clangd",
+		"bashls"
 	}
 end
 

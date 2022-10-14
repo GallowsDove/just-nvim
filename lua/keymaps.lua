@@ -67,5 +67,5 @@ map('n', '<leader>tD', '<Cmd>Gitsigns diffthis<CR>', opts)
 
 
 -- Others
-map('n', '<A-q>', '<Cmd>bd<CR>', opts)
-map('n', '!<A-q>', '<Cmd>bd!<CR>', opts)
+map('n', '<A-q>', '<Cmd>Bdelete<CR>', opts)
+map('n', '!<A-q>', '<Cmd>Bdelete!<CR>', opts)

@@ -42,6 +42,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'xiyaowong/nvim-transparent'
+Plug 'famiu/bufdelete.nvim'
 
 call plug#end()
 

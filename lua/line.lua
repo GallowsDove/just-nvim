@@ -37,6 +37,7 @@ local conditions = {
 -- Config
 local config = {
   options = {
+	disabled_filetypes = { 'NVimTree', 'alpha' },
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',

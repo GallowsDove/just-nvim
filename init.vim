@@ -4,7 +4,7 @@ runtime options.vim
 lua << EOF
   require'impatient'
   
-  require'transparent'.setup({enable = true})
+  require'transparent'.setup()
 	
   -- Bufferline
   require'plugins.bufferline'
@@ -55,6 +55,9 @@ lua << EOF
 
   -- Comment
   require'Comment'.setup()
+
+  -- Hls Lens
+  require'hlslens'.setup()
 
   -- Set Keymaps
   require'keymaps'
